@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>NLP</title>
+</head>
+
+<body>
+    <section class="app">
+        <div class="headline">
+            Evaluate a News Article
+        </div>
+        <form>
+            <div>
+                <label for="syntax">Enter Your Syntax Here</label>
+                <input id="syntax" onblur="" type="text" name="input" value="" placeholder="Enter Your Syntax Here">
+            </div>
+            <button id="generate" onclick="return Client.handleSubmit(event)" type="submit" name="" value="submit">
+                Submit
+            </button>
+            <div class="entry">
+                <div class="analyzer-result">
+                    <div class="subjectivity">Text Subjectivity: &nbsp; <span id="subjectivity"></span></div>
+                    <div class="confidence">Confidence: &nbsp; <span id="confidence"></span></div>
+                    <div class="agreement">Agreement: &nbsp; <span id="agreement"></span></div>
+                    <div class="irony">Irony: &nbsp; <span id="irony"></span></div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+$font-stack: "Oswald", Helvetica, sans-serif;
+$primary-color: #242423;
+$secondary-color: #333533;
+$font-color: #d0c093;
+
+body {
+    background: $primary-color;
+    color: $font-color;
+    font-family: $font-stack;
+}
+
+.app {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    height: 100vh;
+    justify-content: center;
+    grid-gap: 1em;
+    font-size: 20px;
+}
+
+.headline {
+    font-size: 48px;
+    margin-top: 50px;
+}
+
+form {
+    background-color: $secondary-color;
+    border: 1px solid #545454;
+    padding: 70px 40px;
+    margin: 50px 0;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+input {
+    display: block;
+    height: 40px;
+    width: 400px;
+    padding: 15px;
+    background: #cad2c5;
+    color: $secondary-color;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* Style for Placeholder Text*/
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: #368f8b;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #368f8b;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #368f8b;
+}
+
+button {
+    width: 430px;
+    height: 70px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f5cb5c;
+    color: $secondary-color;
+    font-size: 26px;
+    border: none;
+    box-shadow: 2px 4px 5px #2f3e46;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    &:hover,
+    &:active {
+        background-color: #b88e20;
+        color: $font-color;
+    }
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.entry {
+    padding: 15px;
+}
+
+.analyzer-result,
+.polarity,
+.subjectivity,
+.confidence,
+.agreement,
+.irony {
+    margin: 15px 0;
+    color: $font-color;
+}
