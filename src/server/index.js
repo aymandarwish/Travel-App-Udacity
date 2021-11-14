@@ -1,3 +1,6 @@
+// import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
+
 var path = require('path')
 const express = require('express')
 // const mockAPIResponse = require('./mockAPI.js')
