@@ -53,10 +53,10 @@ app.post('/addData', async (req, res) => {
         const userRequest = req.body.text;
         console.log(`Request from user: ${userRequest}`);
         let myURL = encodeURI(`${baseURL}?key=${apiKey}&txt=${userRequest}&lang=en`);
-        const { data: syntaxData } = await axios.get(myURL);
+        const { data: sentenceData } = await axios.get(myURL);
         //console.log(myURL);
-        //console.log(syntaxData);
-        const data  = await syntaxData;
+        //console.log(sentenceData);
+        const data  = await sentenceData;
         console.log(data);
         res.send(data);
     } 
