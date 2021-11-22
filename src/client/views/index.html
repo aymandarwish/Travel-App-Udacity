@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>NLP</title>
+    <title>Travel Planner</title>
 </head>
 
 <body>
@@ -40,6 +40,16 @@
             </form>
         </main>
     </section>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+       </script>
 </body>
 
 </html>

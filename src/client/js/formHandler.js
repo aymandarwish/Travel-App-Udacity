@@ -1,7 +1,10 @@
 import { checkForSentence } from "./sentenceCheck";
-import axios from 'axios';
+// import axios from 'axios';
 
-document.getElementById('generate').addEventListener('click', handleSubmit);
+let submit = document.getElementById('generate');
+if (submit) {
+    submit.addEventListener('click', handleSubmit);
+}
 function handleSubmit(event) {
     event.preventDefault()
     // check what text was put into the form field
@@ -23,19 +26,19 @@ function handleSubmit(event) {
                 document.getElementById('app').style.backgroundImage = `url('${data.myPhotoData}')`;
                 // document.querySelector('#result-wrapper').classList.add("card");
                 document.querySelector('.location-name').innerHTML =
-                    `<p><strong> My trip to : </strong></p>
+                    `<h1><strong> My trip to : </strong></h1>
                 <p>${data.cityData.toponymName}, ${data.cityData.countryName}</p>
                 <hr />`;
                 document.querySelector('.weather').innerHTML =
                     `<div class="weather">
-                    <p>
+                    <h1>
                         <strong>Typical weather for then: </strong>
-                    </p>
+                    </h1>
                     <div class="weather-info">
                         <p>
-                            <span>High - </span>${data.weatherData.temp} °C
+                            <span>High- </span>${data.weatherData.temp} °C
+                            <span>&nbsp; &nbsp; Low- </span>${data.weatherData.app_temp} °C
                             <br />
-                            <span>Low - </span>${data.weatherData.app_temp} °C
                             <br />
                             <span>${data.weatherData.weather.description}</span>
                         </p>
@@ -44,8 +47,9 @@ function handleSubmit(event) {
                     <hr />
                 </div>`;
                 document.querySelector('.time').innerHTML =
-                    `<p><strong> Departing: </strong></p>
-                <p class="uppercase">${data.weatherData.ob_time}</p>`;
+                    `<h1><strong> Departing: </strong></h1>
+                <p class="uppercase">${myDate}</p>`;
+                //data.weatherData.ob_time
             })
     }
     else {

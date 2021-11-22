@@ -33,14 +33,14 @@ body {
 
 .headline {
     font-size: 48px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 form {
     background-color: $secondary-color;
     border: 1px solid #545454;
-    padding: 30px;
-    margin: 20px 0;
+    padding: 20px;
+    margin: 10px 0;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -48,20 +48,24 @@ form {
     -o-border-radius: 20px;
 }
 
+h1 {
+    font-size: 26px;
+}
+
 h1,
 strong,
 .bold {
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
-h1,
 .city,
 .date {
     margin: 15px 0;
 }
 
 p {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 label {
@@ -106,7 +110,7 @@ input {
 button {
     width: 430px;
     height: 70px;
-    margin: 15px 0;
+    margin: 15px 0 30px 0;
     padding: 15px;
     background: #f5cb5c;
     color: $secondary-color;
@@ -136,7 +140,7 @@ button:focus {
 hr {
     width: 100%;
     border: 1px solid $font-color;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .entry {
     padding: 15px;
@@ -148,7 +152,7 @@ hr {
     display: flex;
     color: $font-color;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     img {
         width: 80px;
         height: 80px;
