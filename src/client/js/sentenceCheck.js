@@ -1,6 +1,5 @@
 function checkForSentence(inputText) {
-    debugger;
-    console.log("::: Running checkForName :::", inputText);
+    // console.log("::: Running checkForName :::", inputText);
     if(inputText === null || inputText === "")
         {
             return false

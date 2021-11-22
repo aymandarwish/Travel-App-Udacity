@@ -7,38 +7,39 @@
 </head>
 
 <body>
-    <section class="app">
-        <div class="headline">
-            Evaluate a News Article
+    <section id="app">
+        <div class="holder headline">
+            Travel Planner
         </div>
-        <form>
-            <div>
-                <label for="sentence">Enter Your Sentence Here</label>
-                <input id="sentence" onblur="" type="text" name="input" value="" placeholder="Enter Your Sentence Here">
-            </div>
-            <button id="generate" onclick="return Client.handleSubmit(event)" type="submit" name="" value="submit">
-                Submit
-            </button>
-            <div class="entry">
-                <div class="analyzer-result">
-                    <div class="subjectivity">Text Subjectivity: &nbsp; <span id="subjectivity"></span></div>
-                    <div class="confidence">Confidence: &nbsp; <span id="confidence"></span></div>
-                    <div class="agreement">Agreement: &nbsp; <span id="agreement"></span></div>
-                    <div class="irony">Irony: &nbsp; <span id="irony"></span></div>
+        <main class="wrapper">
+            <form>
+                <div class="city">
+                    <label class="bold" for="city">Enter Location</label>
+                    <input id="city" onblur="" type="text" name="input" value="" placeholder="Location">
                 </div>
-            </div>
-        </form>
+                <div class="date">
+                    <label class="bold" for="date">Departing Date</label>
+                    <input id="date" class="bold" type="date" />
+                </div>
+                <button id="generate" onclick="" type="submit" name="" value="submit">
+                    Add Trip
+                </button>
+                <div>
+                    <div id="result-wrapper">
+                        <div class="location-name"></div>
+                        <div class="weather"></div>
+                        <div class="time">
+                            <div class="timer">
+                                <p id="remainingHours"></p>
+                                <p id="remainingMinutes"></p>
+                                <p id="remainingSeconds"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
     </section>
-
-    <script>
-        // Check that service workers are supported
-        if ('serviceWorker' in navigator) {
-            // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js');
-            });
-        }
-       </script>
 </body>
 
 </html>

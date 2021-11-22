@@ -1,6 +1,6 @@
 {
-  "name": "evaluate_a-news-article",
-  "version": "1.0.0",
+  "name": "travel_app-article",
+  "version": "2.0.0",
   "description": "Udacity Project",
   "main": "index.js",
   "module": "main.js",
@@ -36,7 +36,6 @@
     "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.4.5",
-    "webpack-dev-server": "^3.7.2",
-    "workbox-webpack-plugin": "^6.3.0"
+    "webpack-dev-server": "^3.7.2"
   }
 }

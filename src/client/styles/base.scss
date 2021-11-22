@@ -9,13 +9,26 @@ body {
     font-family: $font-stack;
 }
 
-.app {
+#app {
     display: grid;
     grid-auto-rows: minmax(100px, auto);
     height: 100vh;
     justify-content: center;
     grid-gap: 1em;
     font-size: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100vh;
+    }
+    * {
+        z-index: 1;
+    }
 }
 
 .headline {
@@ -26,8 +39,8 @@ body {
 form {
     background-color: $secondary-color;
     border: 1px solid #545454;
-    padding: 70px 40px;
-    margin: 50px 0;
+    padding: 30px;
+    margin: 20px 0;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -35,10 +48,27 @@ form {
     -o-border-radius: 20px;
 }
 
+h1,
+strong,
+.bold {
+    font-weight: bold;
+}
+
+h1,
+.city,
+.date {
+    margin: 15px 0;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
 label {
     display: block;
+    width: 400px;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 input {
@@ -76,7 +106,7 @@ input {
 button {
     width: 430px;
     height: 70px;
-    margin: 20px 0;
+    margin: 15px 0;
     padding: 15px;
     background: #f5cb5c;
     color: $secondary-color;
@@ -103,16 +133,24 @@ button:focus {
     outline: none;
 }
 
+hr {
+    width: 100%;
+    border: 1px solid $font-color;
+    margin: 10px 0;
+}
 .entry {
     padding: 15px;
 }
-
-.analyzer-result,
-.polarity,
-.subjectivity,
-.confidence,
-.agreement,
-.irony {
-    margin: 15px 0;
+.weather {
+    display: grid;
+}
+.weather-info {
+    display: flex;
     color: $font-color;
+    justify-content: space-between;
+    align-content: center;
+    img {
+        width: 80px;
+        height: 80px;
+    }
 }
