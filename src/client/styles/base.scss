@@ -14,7 +14,7 @@ body {
     grid-auto-rows: minmax(100px, auto);
     height: 100vh;
     justify-content: center;
-    grid-gap: 1em;
+    // grid-gap: 1em;
     font-size: 20px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,14 +32,15 @@ body {
 }
 
 .headline {
-    font-size: 48px;
+    font-size: 42px;
     margin-top: 30px;
+    text-align: center;
 }
 
 form {
     background-color: $secondary-color;
     border: 1px solid #545454;
-    padding: 20px;
+    padding: 20px 10px 0 10px;
     margin: 10px 0;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -70,16 +71,16 @@ p {
 
 label {
     display: block;
-    width: 400px;
+    width: 300px;
     font-size: 20px;
-    margin-bottom: 15px;
+    margin: 0 0 15px 0;
 }
 
 input {
     display: block;
     height: 40px;
-    width: 400px;
-    padding: 15px;
+    width: 280px;
+    padding: 15px 10px;
     background: #cad2c5;
     color: $secondary-color;
     font-size: 20px;
@@ -108,10 +109,9 @@ input {
 }
 
 button {
-    width: 430px;
-    height: 70px;
+    width: 300px;
+    padding: 15px 10px;
     margin: 15px 0 30px 0;
-    padding: 15px;
     background: #f5cb5c;
     color: $secondary-color;
     font-size: 26px;
